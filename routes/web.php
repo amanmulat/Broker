@@ -22,6 +22,7 @@ Route::get('/', function () {
 // Route::get('/dashboard', function () {
 //     return view('dashboard');
 // })->middleware(['auth'])->name('dashboard');
+
 Route::get('modal', [PageController::class , 'index'])->name('modalShow');
 Route::middleware(['auth'])->group(function () {
     Route::resource('unit', UnitController::class);

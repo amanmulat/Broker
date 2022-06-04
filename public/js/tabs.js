@@ -7,6 +7,9 @@ const modalOption = {
 const modalOptionTwo = {
     backdropClasses:
         "bg-gray-900 bg-opacity-50 dark:bg-opacity-80 fixed inset-0 z-41",
+    onHide: () => {
+        console.log("noekfdjas");
+    },
 };
 const modal = new Modal(modaltarget, modalOption);
 const contact_modal = new Modal(contactModal, modalOptionTwo);

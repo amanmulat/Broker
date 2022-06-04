@@ -11,10 +11,13 @@ class PageController extends Controller
     public function index(Request $request)
     {
         //
-        $units = Unit::whereId($request->input('unit') )->get();
+        // dd('this is nice ');
+        $units = Unit::whereId($request->input('unit') )->first();
         // dd($units);
-        return view('welcome' , ['some' => $units])->render();
+        return view('some' , ['unit' => $units]);
         
     }
+
+    
 
 }

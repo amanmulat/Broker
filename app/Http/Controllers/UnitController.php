@@ -122,6 +122,11 @@ class UnitController extends Controller
     public function show(Unit $unit)
     {
         //
+        // error_log('stir it up');
+        dd($unit);
+        return view('components.unitcardedit' , [
+            'unit' => $unit
+        ]);
     }
 
     /**
@@ -136,7 +141,7 @@ class UnitController extends Controller
         // dd('sfsdka');
         // dd($unit);
         // $units = Unit::get();
-        // dd($units);
+        dd($units);
         return view('components.unitcardedit' , [
             'unit' => $unit
         ]);
