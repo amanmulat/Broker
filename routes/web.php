@@ -15,15 +15,26 @@ use App\Http\Controllers\PageController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
 // Route::get('/dashboard', function () {
 //     return view('dashboard');
 // })->middleware(['auth'])->name('dashboard');
 
+Route::get('compare', [PageController::class , 'compare'])->name('compare');
 Route::get('modal', [PageController::class , 'index'])->name('modalShow');
+// Route::get('filter ', [PageController::class , 'index'])->name('modalShow');
+Route::get('modal', [PageController::class , 'index'])->name('modalShow');
+Route::post('modal', [PageController::class , 'store'])->name('modalStore');
+Route::post('modaltwo', [PageController::class , 'removeCart'])->name('cartRemove');
+Route::get('/', [PageController::class , 'getSell'])->name('home');
+Route::post('search',[ PageController::class , 'search'])->name('search');
+Route::get('catagory',[ PageController::class , 'catagory'])->name('catagory');
+Route::get('/test', function () {
+    return view('layouts.guest');
+});
 Route::middleware(['auth'])->group(function () {
     Route::resource('unit', UnitController::class);
     Route::get('/dashboard', function () {

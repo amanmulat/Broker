@@ -23,10 +23,11 @@
                 
             
             <h5 class=" text-lg font-bold tracking-tight text-gray-900 dark:text-white">Sell</h5>
-            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Birr @if (isset($unit))
-                {{$unit->sell['sell']}}
+            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"> @if (isset($unit)){{$unit->sell['sell_currency']}}
+                 <span class="commas">{{$unit->sell['sell']}}</span>  
+                
             @endif</h5>
-            <h5 class=" text-lg font-bold tracking-tight text-gray-900 dark:text-white">Rent / Month</h5>
+            <h5 class=" text-lg font-bold tracking-tight text-gray-900 dark:text-white">Rent</h5>
             <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Birr 10,000 / Month</h5>
             <div class="flex">
                 <h5 class="mb-2 mr-2 text-base font-bold tracking-tight text-gray-700 dark:text-white">Bed 2</h5>
@@ -70,6 +71,8 @@
             </div>
         </div>
     </div>
-    
+   {{-- <script src="{{asset('js/tabs.js')}}"  ></script> --}}
+   
+
 </div>
                     

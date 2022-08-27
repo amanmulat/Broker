@@ -123,7 +123,7 @@ class UnitController extends Controller
     {
         //
         // error_log('stir it up');
-        dd($unit);
+        // dd($unit);
         return view('components.unitcardedit' , [
             'unit' => $unit
         ]);
@@ -141,7 +141,7 @@ class UnitController extends Controller
         // dd('sfsdka');
         // dd($unit);
         // $units = Unit::get();
-        dd($units);
+        // dd($units);
         return view('components.unitcardedit' , [
             'unit' => $unit
         ]);

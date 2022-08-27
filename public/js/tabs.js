@@ -1,14 +1,22 @@
+// var count = 0;
+// if (count === 0) {
 const modaltarget = document.getElementById("extralarge-modal");
 const contactModal = document.getElementById("contact-modal");
 const modalOption = {
+    onShow: () => {
+        console.log("whyyyyyyyyyyyyyy");
+    },
     backdropClasses:
-        "bg-gray-900 bg-opacity-50 dark:bg-opacity-80 fixed inset-0 z-40",
+        "bg-gray-900 bg-opacity-50 dark:bg-opacity-80 fixed inset-0 ",
 };
 const modalOptionTwo = {
     backdropClasses:
         "bg-gray-900 bg-opacity-50 dark:bg-opacity-80 fixed inset-0 z-41",
     onHide: () => {
         console.log("noekfdjas");
+    },
+    onShow: () => {
+        console.log("modal is shown");
     },
 };
 const modal = new Modal(modaltarget, modalOption);
@@ -41,6 +49,7 @@ const options = {
         "text-gray-500 hover:text-gray-600 dark:text-gray-400 border-gray-100 hover:border-gray-300 dark:border-gray-700 dark:hover:text-gray-300",
 };
 const tabs = new Tabs(tabElements, options);
+// }
 
 // console.log(targetEl);
 // modal.show();
